@@ -8,7 +8,7 @@
 import Foundation
 
 class NetworkService{
-    static func loadData(completion: @escaping ([Station], Error?) -> Void ){
+    static func loadData(completion: @escaping ([Line], Error?) -> Void ){
         guard let url = URL(string: "https://api.hh.ru/metro/1") else{
             let error = NSError(domain: "URLResponseError", code: 88005553535, userInfo: nil)
             completion([], error)
@@ -45,11 +45,11 @@ class NetworkService{
             
             
             do {
-                let results =  try JSONDecoder().decode(Info.self, from: data)
-                let mas = results.stations
+                let netCode =  try JSONDecoder().decode(Info.self, from: data)
+                let metroLine = netCode.lines
                 
                 DispatchQueue.main.async {
-                    completion(mas, nil)
+                    completion(metroLine, nil)
                 }
             }
             

@@ -8,7 +8,7 @@
 import UIKit
 
 class CollectionViewController: UIViewController {
-    private var moscowSt = [Station]()
+    private var moscowLn = [Line]()
     
     @IBOutlet weak var stationsCollection: UICollectionView!
     
@@ -18,20 +18,21 @@ class CollectionViewController: UIViewController {
         networkLoad()
     }
     
+    
     func networkLoad(){
-        NetworkService.loadData { (stations, error) in
+        NetworkService.loadData { (lines, error) in
                 if let error = error{
                     self.showAlertError(title: error.localizedDescription)
                 }
-                self.moscowSt = stations
+                self.moscowLn = lines
                 self.stationsCollection.reloadData()
             }
         }
     
+    
     func configureCollection(){
         self.stationsCollection.delegate = self
         self.stationsCollection.dataSource = self
-        
     }
     
     
@@ -41,6 +42,7 @@ class CollectionViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    //-MARK: Flow Layout constansts
     private let spacing: CGFloat = 10
     private let numberOfItemsPerRow: CGFloat = 3
 
@@ -48,10 +50,24 @@ class CollectionViewController: UIViewController {
 }
 
 
+
 //-MARK: Delegate&DataSource
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        moscowSt.count
+        moscowLn[section].stations.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        moscowLn.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionViewTitle.identifier, for: indexPath) as? CollectionViewTitle{
+            sectionHeader.titleLabel.text = "Линия: \(moscowLn[indexPath.section].name)"
+            return sectionHeader
+        }
+        
+        return UICollectionReusableView()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -59,8 +75,9 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MetroCell.identifier, for: indexPath) as? MetroCell else{
             fatalError("Invalid cell id")
         }
-        
-        //some shit
+        let station = moscowLn[indexPath.section].stations[indexPath.row]
+        cell.stNameLable.text = station.name
+        cell.idLable.text = "ID: \(station.id)"
         
         return cell
     }
@@ -69,9 +86,12 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
 }
 
 
+
+
 //-MARK: Layout
 extension CollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         let width = view.bounds.width
         let summarySpacing = spacing * (numberOfItemsPerRow - 1)
         let insets = 2  * spacing

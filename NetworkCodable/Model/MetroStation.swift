@@ -7,13 +7,18 @@
 
 import Foundation
 
-struct Info: Decodable{
+struct Info: Codable{
+    var lines: [Line]
+}
+
+struct Line: Codable{
+    var name: String
     var stations: [Station]
 }
 
-struct Station: Decodable{
-    var name: String
+struct Station: Codable{
     var id: String
-    var lng: String
-    var lat: String
+    var name: String
+    var lat: Float
+    var lng: Float
 }

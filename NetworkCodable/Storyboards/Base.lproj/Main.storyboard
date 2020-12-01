@@ -22,20 +22,67 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="54z-le-hVy">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MetroCell" id="tiT-ot-9Vs" customClass="MetroCell" customModule="NetworkCodable" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RXz-e1-Gz1">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4M-J3-KPL">
+                                                    <rect key="frame" x="5" y="21" width="101" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-rg-ftC">
+                                                    <rect key="frame" x="28" y="78" width="72" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jjj-rg-ftC" firstAttribute="top" secondItem="l4M-J3-KPL" secondAttribute="bottom" constant="36" id="2ss-tg-CBm"/>
+                                                <constraint firstItem="l4M-J3-KPL" firstAttribute="leading" secondItem="RXz-e1-Gz1" secondAttribute="leading" constant="5" id="CXF-VY-1EK"/>
+                                                <constraint firstItem="l4M-J3-KPL" firstAttribute="top" secondItem="RXz-e1-Gz1" secondAttribute="top" constant="21" id="HlV-Xn-rPh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Jjj-rg-ftC" secondAttribute="bottom" constant="29" id="Jkw-Ym-Tiv"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jjj-rg-ftC" secondAttribute="trailing" constant="20" symbolic="YES" id="dcA-9g-m2O"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l4M-J3-KPL" secondAttribute="trailing" constant="20" symbolic="YES" id="jG9-Fw-Kig"/>
+                                                <constraint firstItem="Jjj-rg-ftC" firstAttribute="leading" secondItem="RXz-e1-Gz1" secondAttribute="leading" constant="28" id="jGw-xu-csI"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="idLable" destination="Jjj-rg-ftC" id="VeO-0i-e7Q"/>
+                                            <outlet property="stNameLable" destination="l4M-J3-KPL" id="E37-TX-48r"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CollectionTitle" id="bH6-cf-cEG" customClass="CollectionViewTitle" customModule="NetworkCodable" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqh-En-V9a">
+                                            <rect key="frame" x="179" y="15" width="56" height="27"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nqh-En-V9a" firstAttribute="bottom" secondItem="bH6-cf-cEG" secondAttribute="bottomMargin" id="Nq6-6w-s4u"/>
+                                        <constraint firstItem="nqh-En-V9a" firstAttribute="centerX" secondItem="bH6-cf-cEG" secondAttribute="centerX" id="YFA-3a-0F2"/>
+                                        <constraint firstItem="nqh-En-V9a" firstAttribute="top" secondItem="bH6-cf-cEG" secondAttribute="topMargin" constant="7" id="crS-Ve-pkg"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="titleLabel" destination="nqh-En-V9a" id="fBD-sW-D94"/>
+                                    </connections>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

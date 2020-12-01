@@ -10,6 +10,8 @@ import UIKit
 class MetroCell: UICollectionViewCell {
     static let identifier = "MetroCell"
     
+    @IBOutlet weak var stNameLable: UILabel!
     
+    @IBOutlet weak var idLable: UILabel!
     
 }
