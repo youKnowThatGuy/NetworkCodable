@@ -43,10 +43,22 @@ class CollectionViewController: UIViewController {
     }
     
     //-MARK: Flow Layout constansts
-    private let spacing: CGFloat = 10
+    private let spacing: CGFloat = 20
     private let numberOfItemsPerRow: CGFloat = 3
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier{
+        case "currStationSegue":
+            guard let vc = segue.destination as? DetailedStationController,
+                  let stationInfo = sender as? Station
+            else{ fatalError("Invalid data has been passed")}
+            
+            vc.station = stationInfo
+            
+        default:
+            break
+        }
+    }
 }
 
 
@@ -62,6 +74,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         if let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionViewTitle.identifier, for: indexPath) as? CollectionViewTitle{
             sectionHeader.titleLabel.text = "Линия: \(moscowLn[indexPath.section].name)"
             return sectionHeader
@@ -79,7 +92,16 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         cell.stNameLable.text = station.name
         cell.idLable.text = "ID: \(station.id)"
         
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 2
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let station = moscowLn[indexPath.section].stations[indexPath.row]
+        
+        performSegue(withIdentifier: "currStationSegue", sender: station)
     }
     
     

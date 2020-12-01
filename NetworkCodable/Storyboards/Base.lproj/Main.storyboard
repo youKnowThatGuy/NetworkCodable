@@ -28,33 +28,31 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MetroCell" id="tiT-ot-9Vs" customClass="MetroCell" customModule="NetworkCodable" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="50" width="128" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RXz-e1-Gz1">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="saV-sX-PGj">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4M-J3-KPL">
-                                                    <rect key="frame" x="5" y="21" width="101" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4M-J3-KPL">
+                                                    <rect key="frame" x="27" y="21" width="74.5" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Station id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-rg-ftC">
-                                                    <rect key="frame" x="28" y="78" width="72" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Station id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-rg-ftC">
+                                                    <rect key="frame" x="29.5" y="71.5" width="69" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Jjj-rg-ftC" firstAttribute="top" secondItem="l4M-J3-KPL" secondAttribute="bottom" constant="36" id="2ss-tg-CBm"/>
-                                                <constraint firstItem="l4M-J3-KPL" firstAttribute="leading" secondItem="RXz-e1-Gz1" secondAttribute="leading" constant="5" id="CXF-VY-1EK"/>
-                                                <constraint firstItem="l4M-J3-KPL" firstAttribute="top" secondItem="RXz-e1-Gz1" secondAttribute="top" constant="21" id="HlV-Xn-rPh"/>
+                                                <constraint firstItem="l4M-J3-KPL" firstAttribute="top" secondItem="saV-sX-PGj" secondAttribute="top" constant="21" id="HlV-Xn-rPh"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jjj-rg-ftC" secondAttribute="bottom" constant="29" id="Jkw-Ym-Tiv"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Jjj-rg-ftC" secondAttribute="trailing" constant="20" symbolic="YES" id="dcA-9g-m2O"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="l4M-J3-KPL" secondAttribute="trailing" constant="20" symbolic="YES" id="jG9-Fw-Kig"/>
-                                                <constraint firstItem="Jjj-rg-ftC" firstAttribute="leading" secondItem="RXz-e1-Gz1" secondAttribute="leading" constant="28" id="jGw-xu-csI"/>
+                                                <constraint firstItem="Jjj-rg-ftC" firstAttribute="centerX" secondItem="saV-sX-PGj" secondAttribute="centerX" id="c8P-Rs-UNQ"/>
+                                                <constraint firstItem="l4M-J3-KPL" firstAttribute="centerX" secondItem="saV-sX-PGj" secondAttribute="centerX" id="eR6-UW-4xG"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
@@ -97,28 +95,82 @@
                     <navigationItem key="navigationItem" title="Moscow never sleeps..." id="abR-Y9-vEe"/>
                     <connections>
                         <outlet property="stationsCollection" destination="X8X-Er-Q9g" id="R7q-c3-X6U"/>
-                        <segue destination="83a-yW-oMF" kind="presentation" id="1WI-Lq-1DM"/>
+                        <segue destination="83a-yW-oMF" kind="presentation" identifier="currStationSegue" id="1WI-Lq-1DM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="81.696428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Detailed Station Controller-->
         <scene sceneID="pQU-T2-9ii">
             <objects>
-                <viewController id="83a-yW-oMF" sceneMemberID="viewController">
+                <viewController id="83a-yW-oMF" customClass="DetailedStationController" customModule="NetworkCodable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kYP-0G-FaW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Станция метро:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Shd-cq-NRF">
+                                <rect key="frame" x="118" y="97" width="179" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faR-VA-wsp">
+                                <rect key="frame" x="181" y="150" width="52" height="27"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moscowLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fB5-Xl-Gjq">
+                                <rect key="frame" x="91" y="214" width="233" height="146"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="146" id="fgm-FD-PFW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZP-eE-mxh">
+                                <rect key="frame" x="118" y="396" width="179" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ns-1U-reD">
+                                <rect key="frame" x="118" y="449" width="179" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="46i-Ov-WvL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Shd-cq-NRF" firstAttribute="leading" secondItem="46i-Ov-WvL" secondAttribute="leading" constant="118" id="4hQ-FL-wdu"/>
+                            <constraint firstItem="9Ns-1U-reD" firstAttribute="leading" secondItem="46i-Ov-WvL" secondAttribute="leading" constant="118" id="4rc-dw-F5Z"/>
+                            <constraint firstItem="46i-Ov-WvL" firstAttribute="trailing" secondItem="9Ns-1U-reD" secondAttribute="trailing" constant="117" id="6Pe-Pf-3Bz"/>
+                            <constraint firstItem="46i-Ov-WvL" firstAttribute="bottom" secondItem="9Ns-1U-reD" secondAttribute="bottom" constant="333" id="9JI-0Y-ch6"/>
+                            <constraint firstItem="faR-VA-wsp" firstAttribute="centerX" secondItem="kYP-0G-FaW" secondAttribute="centerX" id="B47-qw-rtr"/>
+                            <constraint firstItem="Shd-cq-NRF" firstAttribute="top" secondItem="46i-Ov-WvL" secondAttribute="top" constant="97" id="E1V-Zq-zmn"/>
+                            <constraint firstItem="fB5-Xl-Gjq" firstAttribute="centerX" secondItem="NZP-eE-mxh" secondAttribute="centerX" id="HmH-zn-jXi"/>
+                            <constraint firstItem="faR-VA-wsp" firstAttribute="top" secondItem="Shd-cq-NRF" secondAttribute="bottom" constant="23" id="IKz-jX-tex"/>
+                            <constraint firstItem="NZP-eE-mxh" firstAttribute="leading" relation="lessThanOrEqual" secondItem="46i-Ov-WvL" secondAttribute="leading" constant="118" id="R8l-ie-gab"/>
+                            <constraint firstItem="46i-Ov-WvL" firstAttribute="trailing" secondItem="Shd-cq-NRF" secondAttribute="trailing" constant="117" id="RPi-Yi-8ps"/>
+                            <constraint firstItem="46i-Ov-WvL" firstAttribute="trailing" secondItem="NZP-eE-mxh" secondAttribute="trailing" constant="117" id="Vo0-sU-sMU"/>
+                            <constraint firstItem="fB5-Xl-Gjq" firstAttribute="top" secondItem="faR-VA-wsp" secondAttribute="bottom" constant="37" id="XAa-uJ-NE6"/>
+                            <constraint firstItem="NZP-eE-mxh" firstAttribute="top" secondItem="fB5-Xl-Gjq" secondAttribute="bottom" constant="36" id="YvX-5s-bDj"/>
+                            <constraint firstItem="fB5-Xl-Gjq" firstAttribute="leading" secondItem="46i-Ov-WvL" secondAttribute="leading" constant="91" id="dvU-rI-uCK"/>
+                            <constraint firstItem="9Ns-1U-reD" firstAttribute="top" secondItem="NZP-eE-mxh" secondAttribute="bottom" constant="27" id="ncm-hL-rNT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1ws-Wz-GW9"/>
+                    <connections>
+                        <outlet property="latitudeLabel" destination="9Ns-1U-reD" id="Bxy-Hq-Pv9"/>
+                        <outlet property="longtitudeLabel" destination="NZP-eE-mxh" id="12J-Dl-NIC"/>
+                        <outlet property="stationNameLabel" destination="faR-VA-wsp" id="rLr-j0-05e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xdu-EH-ZXq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720" y="82"/>
+            <point key="canvasLocation" x="1718.840579710145" y="81.696428571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HNT-qk-VBi">
@@ -140,6 +192,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="moscowLogo" width="1200" height="900"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

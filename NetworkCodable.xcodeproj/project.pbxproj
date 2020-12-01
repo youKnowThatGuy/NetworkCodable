@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6924739A2576EF9200322B5F /* DetailedStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692473992576EF9200322B5F /* DetailedStationController.swift */; };
 		6958B28525753C540032104D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28425753C540032104D /* AppDelegate.swift */; };
 		6958B28725753C540032104D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28625753C540032104D /* SceneDelegate.swift */; };
 		6958B28925753C540032104D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28825753C540032104D /* CollectionViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		692473992576EF9200322B5F /* DetailedStationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedStationController.swift; sourceTree = "<group>"; };
 		6958B28125753C540032104D /* NetworkCodable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkCodable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6958B28425753C540032104D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6958B28625753C540032104D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				6958B28825753C540032104D /* CollectionViewController.swift */,
+				692473992576EF9200322B5F /* DetailedStationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				6958B28925753C540032104D /* CollectionViewController.swift in Sources */,
 				6958B28525753C540032104D /* AppDelegate.swift in Sources */,
 				6958B2A025753EF90032104D /* NetworkService.swift in Sources */,
+				6924739A2576EF9200322B5F /* DetailedStationController.swift in Sources */,
 				6958B2AA2576DE160032104D /* CollectionViewTitle.swift in Sources */,
 				6958B28725753C540032104D /* SceneDelegate.swift in Sources */,
 				6958B2A725755EAB0032104D /* MetroCell.swift in Sources */,
