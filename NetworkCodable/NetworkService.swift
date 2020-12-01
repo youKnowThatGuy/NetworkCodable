@@ -9,14 +9,11 @@ import Foundation
 
 class NetworkService{
     static func loadData(completion: @escaping ([Station], Error?) -> Void ){
-        guard let url = URL(string: "https://swapi.dev/api/people/") else{
+        guard let url = URL(string: "https://api.hh.ru/metro/1") else{
             let error = NSError(domain: "URLResponseError", code: 88005553535, userInfo: nil)
             completion([], error)
             return
         }
-        
-        
-        
         
         let config = URLSessionConfiguration.default
         config.timeoutIntervalForRequest = 15
@@ -32,6 +29,7 @@ class NetworkService{
                 return
             }
             
+            
             let response = response as! HTTPURLResponse
             guard let data = data
             else{
@@ -44,6 +42,7 @@ class NetworkService{
                 
                 return
             }
+            
             
             do {
                 let results =  try JSONDecoder().decode(Info.self, from: data)

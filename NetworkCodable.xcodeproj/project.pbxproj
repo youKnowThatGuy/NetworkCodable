@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		6958B28525753C540032104D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28425753C540032104D /* AppDelegate.swift */; };
 		6958B28725753C540032104D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28625753C540032104D /* SceneDelegate.swift */; };
-		6958B28925753C540032104D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28825753C540032104D /* ViewController.swift */; };
+		6958B28925753C540032104D /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B28825753C540032104D /* CollectionViewController.swift */; };
 		6958B28C25753C540032104D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6958B28A25753C540032104D /* Main.storyboard */; };
 		6958B28E25753C570032104D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6958B28D25753C570032104D /* Assets.xcassets */; };
 		6958B29125753C570032104D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6958B28F25753C570032104D /* LaunchScreen.storyboard */; };
 		6958B2A025753EF90032104D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B29F25753EF90032104D /* NetworkService.swift */; };
 		6958B2A3257551490032104D /* MetroStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B2A2257551490032104D /* MetroStation.swift */; };
+		6958B2A725755EAB0032104D /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B2A625755EAB0032104D /* MetroCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6958B28125753C540032104D /* NetworkCodable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkCodable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6958B28425753C540032104D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6958B28625753C540032104D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6958B28825753C540032104D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6958B28825753C540032104D /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		6958B28B25753C540032104D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6958B28D25753C570032104D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6958B29025753C570032104D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6958B29225753C570032104D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6958B29F25753EF90032104D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6958B2A2257551490032104D /* MetroStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStation.swift; sourceTree = "<group>"; };
+		6958B2A625755EAB0032104D /* MetroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,7 @@
 		6958B29A25753E0B0032104D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6958B28825753C540032104D /* ViewController.swift */,
+				6958B28825753C540032104D /* CollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 		6958B29E25753E680032104D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6958B2A625755EAB0032104D /* MetroCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,10 +187,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6958B2A3257551490032104D /* MetroStation.swift in Sources */,
-				6958B28925753C540032104D /* ViewController.swift in Sources */,
+				6958B28925753C540032104D /* CollectionViewController.swift in Sources */,
 				6958B28525753C540032104D /* AppDelegate.swift in Sources */,
 				6958B2A025753EF90032104D /* NetworkService.swift in Sources */,
 				6958B28725753C540032104D /* SceneDelegate.swift in Sources */,
+				6958B2A725755EAB0032104D /* MetroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
