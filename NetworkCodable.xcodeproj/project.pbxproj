@@ -15,9 +15,9 @@
 		6958B28E25753C570032104D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6958B28D25753C570032104D /* Assets.xcassets */; };
 		6958B29125753C570032104D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6958B28F25753C570032104D /* LaunchScreen.storyboard */; };
 		6958B2A025753EF90032104D /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B29F25753EF90032104D /* NetworkService.swift */; };
-		6958B2A3257551490032104D /* MetroStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B2A2257551490032104D /* MetroStation.swift */; };
 		6958B2A725755EAB0032104D /* MetroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B2A625755EAB0032104D /* MetroCell.swift */; };
 		6958B2AA2576DE160032104D /* CollectionViewTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6958B2A92576DE160032104D /* CollectionViewTitle.swift */; };
+		696265FD257D10DF001B2FCE /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696265FC257D10DF001B2FCE /* NetworkInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +31,9 @@
 		6958B29025753C570032104D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6958B29225753C570032104D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6958B29F25753EF90032104D /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		6958B2A2257551490032104D /* MetroStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroStation.swift; sourceTree = "<group>"; };
 		6958B2A625755EAB0032104D /* MetroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroCell.swift; sourceTree = "<group>"; };
 		6958B2A92576DE160032104D /* CollectionViewTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTitle.swift; sourceTree = "<group>"; };
+		696265FC257D10DF001B2FCE /* NetworkInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 		6958B29B25753E1F0032104D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6958B2A2257551490032104D /* MetroStation.swift */,
+				696265FC257D10DF001B2FCE /* NetworkInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,13 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6958B2A3257551490032104D /* MetroStation.swift in Sources */,
 				6958B28925753C540032104D /* CollectionViewController.swift in Sources */,
 				6958B28525753C540032104D /* AppDelegate.swift in Sources */,
 				6958B2A025753EF90032104D /* NetworkService.swift in Sources */,
 				6924739A2576EF9200322B5F /* DetailedStationController.swift in Sources */,
 				6958B2AA2576DE160032104D /* CollectionViewTitle.swift in Sources */,
 				6958B28725753C540032104D /* SceneDelegate.swift in Sources */,
+				696265FD257D10DF001B2FCE /* NetworkInfo.swift in Sources */,
 				6958B2A725755EAB0032104D /* MetroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

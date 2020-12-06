@@ -45,7 +45,7 @@ class NetworkService{
             
             
             do {
-                let netCode =  try JSONDecoder().decode(Info.self, from: data)
+                let netCode =  try JSONDecoder().decode(NetworkInfo.self, from: data)
                 let metroLine = netCode.lines
                 
                 DispatchQueue.main.async {
